@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+int saveThePrisoner(int n, int m, int s) {
+    int i = s - 1;
+    //for(i = s; i < n; i++)
+    //{
+        while(m > 0)
+        {
+            cout<<m<<" "<<i<<endl;
+            i = (i + 1)%n;
+            m -= 1;
+        }
+    //}
+    return (i);
+}
+
+int main()
+{
+    int n, m, s;
+    cin>>n;
+    cin>>m;
+    cin>>s;
+    int w = saveThePrisoner(n, m, s);
+    cout<<"warn: "<<w;
+    
+}
